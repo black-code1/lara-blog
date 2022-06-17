@@ -1,3 +1,5 @@
 #https://laravel.com/docs/9.x
 vim ~/.zshrc
 sudo vim /etc/paths
+
+#https://laravel.com/docs/9.x/routing
