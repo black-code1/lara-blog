@@ -1,11 +1,5 @@
-<!doctype html>
-
-<title>My Blog</title>
-<link rel="stylesheet" href="/app.css">
-
-<body>
+<x-layout>
     @foreach ($posts as $post)
-        @dd($loop)
         <article>
             <h1>
                 <a href="/posts/{{$post->slug}}">
@@ -18,4 +12,5 @@
             </div>
         </article>
     @endforeach
-</body>
+</x-layout>
+
