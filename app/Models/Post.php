@@ -16,9 +16,14 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function user()
+//    public function user() //  it assumes that user_id is the foreign key
+//    {
+//        return $this->belongsTo(User::class);
+//    }
+
+    public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
 }
