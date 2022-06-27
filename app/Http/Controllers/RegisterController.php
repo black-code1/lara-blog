@@ -22,13 +22,10 @@ class RegisterController extends Controller
             'password' => 'required|min:7|max:255'
         ]);
 
-        // 'username' => ['required', 'min:3', 'max:255', Rule::unique('users', 'username')],
-
-
         User::create($attributes);
 
-        return redirect('/');
+//        session()->flash('success', 'Your account has been created.');
 
-
+        return redirect('/')->with('success', 'Your account has been created.');
     }
 }
